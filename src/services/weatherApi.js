@@ -16,6 +16,8 @@ const MOCK_WEATHER = {
         sunrise: 1709255400,
         sunset: 1709298600,
         dt: 1709280000,
+        precipitation: 0,
+        uvIndex: 4
     },
     forecast: [
         { dt: 1709341200, temp: 31, icon: '01d', condition: 'Sunny' },
@@ -44,7 +46,12 @@ const MOCK_WEATHER = {
             o3: 60,
         }
     },
-    rainChance: 25,
+    rainChances: [
+        { day: 'Friday', chance: 10 },
+        { day: 'Saturday', chance: 20 },
+        { day: 'Sunday', chance: 50 },
+        { day: 'Monday', chance: 5 }
+    ]
 };
 
 const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
