@@ -11,12 +11,28 @@ import SearchBar from './components/SearchBar';
 import { LayoutDashboard } from 'lucide-react';
 
 const DashboardLayout = () => {
-    const { loading } = useWeather();
+    const { loading, error } = useWeather();
 
     if (loading) {
         return (
             <div className="min-h-screen bg-[#101014] text-white flex items-center justify-center">
                 <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-orange-500"></div>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="min-h-screen bg-[#101014] text-white flex flex-col items-center justify-center p-8 text-center">
+                <div className="text-red-500 text-5xl mb-4">⚠️</div>
+                <h1 className="text-2xl font-bold mb-2">Oops! Something went wrong</h1>
+                <p className="text-gray-400 max-w-md">{error}</p>
+                <button
+                    onClick={() => window.location.reload()}
+                    className="mt-6 px-6 py-2 bg-orange-500 rounded-full font-medium hover:bg-orange-600 transition-colors"
+                >
+                    Try Again
+                </button>
             </div>
         );
     }
