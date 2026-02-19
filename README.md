@@ -2,6 +2,9 @@
 
 A premium, real-time weather dashboard built with React, Vite, and Tailwind CSS. This application provides detailed weather metrics, a 5-day forecast, and dynamic visualizations in a modern, responsive interface.
 
+## 🔗 Live Demo
+[View Live Project](https://weather-web-dashboard-mansehaj12.vercel.app/) *(Make sure this matches your Vercel URL)*
+
 ![Weather Dashboard Demo](https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=1000)
 *(Replace this link with a screenshot of your actual dashboard)*
 
